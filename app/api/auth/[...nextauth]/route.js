@@ -17,12 +17,9 @@ const handler = NextAuth({
           .select("*")
           .eq("email", credentials.email)
           .single()
-
         if (!user) return null
-
         const passwordMatch = await bcrypt.compare(credentials.password, user.password)
         if (!passwordMatch) return null
-
         return { id: user.id, name: user.name, email: user.email }
       }
     })
