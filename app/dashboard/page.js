@@ -60,6 +60,12 @@ export default function Dashboard() {
           />
           <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
             <span style={{ fontSize: 14, color: "#374151" }}>👋 {session.user.name}</span>
+            <a href="/my-listings" style={{ padding: "8px 16px", fontSize: 14, border: "1px solid #e5e7eb", borderRadius: 8, textDecoration: "none", color: "#2563eb" }}>
+              Мои объявления
+            </a>
+            <a href="/listings/new" style={{ padding: "8px 16px", fontSize: 14, background: "#2563eb", color: "#fff", borderRadius: 8, textDecoration: "none" }}>
+              + Подать
+            </a>
             <a href="/api/auth/signout" style={{ padding: "8px 16px", fontSize: 14, border: "1px solid #e5e7eb", borderRadius: 8, textDecoration: "none", color: "#ef4444" }}>
               Выйти
             </a>
